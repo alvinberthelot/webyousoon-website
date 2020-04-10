@@ -1,0 +1,4 @@
+{
+  "tags": ["employees"],
+  "permalink": "/{{ firstname | slug }}-{{ lastname | slug }}.html"
+}
