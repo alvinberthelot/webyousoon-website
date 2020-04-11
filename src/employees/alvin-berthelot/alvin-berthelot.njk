@@ -2,13 +2,17 @@
 layout: layouts/main.layout.njk
 ---
 
-<h2>
-  {{ firstname }}
-  {{ lastname }}
-</h2>
+<section>
 
-{% include "skills.njk" %}
-{% include "technical-skills.njk" %}
-{% include "education.njk" %}
-{% include "work-experience.njk" %}
-{% include "events.njk" %}
+  <h2>
+    {{ firstname }}
+    {{ lastname }}
+  </h2>
+
+  {% include "skills.njk" %}
+  {% include "technical-skills.njk" %}
+  {% include "education.njk" %}
+  {% include "work-experience.njk" %}
+  {% include "events.njk" %}
+
+</section>

@@ -1,18 +1,22 @@
-<section>
-  <h3>{{ skillsSection.title }}</h3>
-  <p>{{ skillsSection.description }}</p>
-  <ul>
-    {%- for skill in skillsSection.skills %}
-      <li>
-        <div>
-          <h4>{{ skill.title }}</h4>
-          <ul>
-            {%- for subskill in skill.subskills %}
-              <li>{{ subskill }}</li>
-            {%- endfor %}
-          </ul>
-        </div>
-      </li>
-    {%- endfor %}
-  </ul>
+<section class="flex">
+  <div class="w-1/3 mx-4 ml-auto px-6 py-4 bg-gray-400">
+    <h3>{{ skillsSection.title }}</h3>
+    <p>{{ skillsSection.description }}</p>
+  </div>
+  <div class="w-1/3 mx-4 mr-auto px-6 py-4 bg-gray-200">
+    <ul>
+      {%- for skill in skillsSection.skills %}
+        <li>
+          <div>
+            <h4>{{ skill.title }}</h4>
+            <ul class="list-square list-skills">
+              {%- for subskill in skill.subskills %}
+                <li>{{ subskill }}</li>
+              {%- endfor %}
+            </ul>
+          </div>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
 </section>
