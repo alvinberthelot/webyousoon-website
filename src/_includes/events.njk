@@ -3,12 +3,12 @@
   <p>{{ eventsSection.description }}</p>
   <ul>
     {%- for event in eventsSection.events %}
-    <li>
-      <div>
-        <h4>{{ event.title }}</h4>
-        <p>{{ event.session }}</p>
-      </div>
-    </li>
+      <li>
+        <div>
+          <h4>{{ event.title }}</h4>
+          <p>{{ event.session }}</p>
+        </div>
+      </li>
     {%- endfor %}
   </ul>
 </section>

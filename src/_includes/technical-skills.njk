@@ -3,37 +3,37 @@
   <p>{{ technicalSkillsSection.description }}</p>
   <ul>
     {%- for aggregate in technicalSkillsSection.aggregates %}
-    <li>
-      <div>
-        <h4>{{ aggregate.title }}</h4>
-        <ul>
-          {%- for stack in aggregate.stacks %}
-          <li>
-            <div>
-              {{ stack.title }}
-              <ul>
-                {%- for substack in stack.substacks %}
-                <li>
-                  <div>
-                    {{ substack.title }}
-                    <ul>
-                      {%- for knowledge in substack.knowledges %}
+      <li>
+        <div>
+          <h4>{{ aggregate.title }}</h4>
+          <ul>
+            {%- for stack in aggregate.stacks %}
+              <li>
+                <div>
+                  {{ stack.title }}
+                  <ul>
+                    {%- for substack in stack.substacks %}
                       <li>
-                        {{ knowledge }}
+                        <div>
+                          {{ substack.title }}
+                          <ul>
+                            {%- for knowledge in substack.knowledges %}
+                              <li>
+                                {{ knowledge }}
+                              </li>
+                            {%- endfor %}
+                          </ul>
+                        </div>
                       </li>
-                      {%- endfor %}
-                    </ul>
-                  </div>
-                </li>
-                {%- endfor %}
-              </ul>
-            </div>
-          </li>
+                    {%- endfor %}
+                  </ul>
+                </div>
+              </li>
 
-          {%- endfor %}
-        </ul>
-      </div>
-    </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </li>
     {%- endfor %}
   </ul>
 </section>

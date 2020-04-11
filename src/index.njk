@@ -6,6 +6,8 @@ layout: layouts/app.layout.njk
 
 <ul>
   {%- for employee in collections.employees %}
-  <li><a href="{{ employee.url }}">{{ employee.data.firstname }}</a></li>
+    <li>
+      <a href="{{ employee.url }}">{{ employee.data.firstname }}</a>
+    </li>
   {%- endfor %}
 </ul>

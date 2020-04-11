@@ -3,18 +3,18 @@
   <p>{{ educationSection.description }}</p>
   <ul>
     {%- for year in educationSection.years %}
-    <li>
-      <div>
-        <h4>{{ year.title }}</h4>
-        <ul>
-          {%- for education in year.educations %}
-          <li>
-              {{ education }}
-          </li>
-          {%- endfor %}
-        </ul>
-      </div>
-    </li>
+      <li>
+        <div>
+          <h4>{{ year.title }}</h4>
+          <ul>
+            {%- for education in year.educations %}
+              <li>
+                {{ education }}
+              </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </li>
     {%- endfor %}
   </ul>
 </section>
