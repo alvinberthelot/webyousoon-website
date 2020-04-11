@@ -1,0 +1,29 @@
+<section>
+  <h3>{{ workExperienceSection.title }}</h3>
+  <p>{{ workExperienceSection.description }}</p>
+  <ul>
+    {%- for mission in workExperienceSection.missions %}
+    <li>
+      <div>
+        <h4>{{ mission.title }}</h4>
+        <p>{{ mission.description }}</p>
+        <ul>
+          {%- for task in mission.tasks %}
+          <li>
+              {{ task }}
+          </li>
+          {%- endfor %}
+        </ul>
+        <p>Environnement technique</p>
+        <ul>
+          {%- for tag in mission.tags %}
+          <li>
+              {{ tag }}
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

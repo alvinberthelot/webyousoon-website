@@ -4,22 +4,8 @@ layout: layouts/main.layout.njk
 
 <h2>{{ firstname }} {{ lastname }}</h2>
 
-<h3>Compétences</h3>
-<ul>
-  {%- for skill in skills %}
-  <li>
-    <div>
-      <h4>{{ skill.title }}</h4>
-      <ul>
-        {%- for subskill in skill.subskills %}
-        <li>{{ subskill }}</li>
-        {%- endfor %}
-      </ul>
-    </div>
-  </li>
-  {%- endfor %}
-</ul>
-
-
-
-
+{% include "skills.njk" %}
+{% include "technical-skills.njk" %}
+{% include "education.njk" %}
+{% include "work-experience.njk" %}
+{% include "events.njk" %}

@@ -1,0 +1,18 @@
+<section>
+  <h3>{{ skillsSection.title }}</h3>
+  <p>{{ skillsSection.description }}</p>
+  <ul>
+    {%- for skill in skillsSection.skills %}
+    <li>
+      <div>
+        <h4>{{ skill.title }}</h4>
+        <ul>
+          {%- for subskill in skill.subskills %}
+          <li>{{ subskill }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
