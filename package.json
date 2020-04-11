@@ -1,25 +1,30 @@
 {
   "name": "webyousoon-website",
   "version": "1.0.0",
-  "description": "",
+  "author": "Alvin BERTHELOT",
+  "description": "Static generator of Webyousoon's website",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve --input=./src --output=./dist",
-    "clean": "rm -rf dist",
-    "build": "eleventy"
+    "start": "npm run dev",
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve --input=./src --output=./dist",
+    "build": "cross-env ELEVENTY_ENV=prod eleventy --input=./src --output=./dist",
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alvinberthelot/webyousoon-website.git"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alvinberthelot/webyousoon-website/issues"
   },
   "homepage": "https://github.com/alvinberthelot/webyousoon-website#readme",
   "dependencies": {
-    "@11ty/eleventy": "0.10.0"
+    "@11ty/eleventy": "0.10.0",
+    "html-minifier": "4.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.2"
   }
 }
