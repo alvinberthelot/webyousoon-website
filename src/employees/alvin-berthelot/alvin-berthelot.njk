@@ -4,35 +4,10 @@ layout: layouts/main.layout.njk
 
 <section>
 
-  {% include "jumbotron.html" %}
-
-  {% include "skills.njk" %}
-
-  <div class="grid grid-cols-8 mb-12">
-    <div class="col-span-1"></div>
-    <div class="col-span-6 py-12">
-      {% include "technical-skills.njk" %}
-    </div>
-    <div class="col-span-1"></div>
-  </div>
-
-  <div class="grid grid-cols-8 mb-12">
-    <div class="col-span-1 bg-gray-100"></div>
-    <div class="col-span-5 bg-gray-100 py-12">
-      {% include "education.njk" %}
-    </div>
-    <div class="col-span-2"></div>
-  </div>
-
-  <div class="grid grid-cols-8 mb-12">
-    <div class="col-span-1"></div>
-    <div class="col-span-3">
-      {% include "work-experience.njk" %}
-    </div>
-    <div class="col-span-1"></div>
-    <div class="col-span-3">
-      {% include "events.njk" %}
-    </div>
-  </div>
+  {% include "section-jumbotron.html" %}
+  {% include "section-skills.html" %}
+  {% include "section-technical-skills.html" %}
+  {% include "section-education.html" %}
+  {% include "section-experience.html" %}
 
 </section>

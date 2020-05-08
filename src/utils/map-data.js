@@ -4,8 +4,35 @@ const { groupBy, sortBy } = require("lodash")
 function mapData(data) {
   const result = {
     ...data,
+    educationSection: mapEducationSection(data.educationSection),
     eventsSection: mapEventsSection(data.eventsSection),
   }
+  return result
+}
+
+function mapEducationSection(educationSection) {
+  console.log(educationSection)
+
+  // return educationSection
+  return {
+    ...educationSection,
+    educationsByYear: mapEducations(educationSection.educations),
+  }
+}
+
+function mapEducations(educations) {
+  const educationsDated = educations.map((education) => ({
+    ...education,
+    date: moment(education.date, "DD-MM-YYYY"),
+  }))
+  const educationsGroupByYear = groupBy(educationsDated, (education) =>
+    education.date.year()
+  )
+  const yearsSortedDesc = sortBy(Object.keys(educationsGroupByYear)).reverse()
+  const result = yearsSortedDesc.map((year) => ({
+    year: +year,
+    educations: educationsGroupByYear[year],
+  }))
   return result
 }
 
