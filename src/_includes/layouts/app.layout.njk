@@ -1,7 +1,6 @@
 ---
 title: Webyousoon
 ---
-
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -10,9 +9,9 @@ title: Webyousoon
         <title>{{ title }}</title>
         <link rel="stylesheet" href="index.css">
     </head>
-    <body class="container mx-auto">
-        {% include "header.njk" %}
+    <body>
+        {% include "header.html" %}
         {{ content | safe }}
-        {% include "footer.njk" %}
+        {% include "footer.html" %}
     </body>
 </html>

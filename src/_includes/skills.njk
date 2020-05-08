@@ -1,9 +1,15 @@
-<section class="flex">
-  <div class="w-1/3 mx-4 ml-auto px-6 py-4 bg-gray-400">
-    <h3>{{ skillsSection.title }}</h3>
+<div class="grid grid-cols-8 mb-12">
+  <div class="col-span-1"></div>
+  <div class="col-span-7">
+    <h3 class="text-4xl text-blue-200 uppercase">{{ skillsSection.title }}</h3>
+  </div>
+
+  <div class="col-span-1"></div>
+  <div class="col-span-3">
     <p>{{ skillsSection.description }}</p>
   </div>
-  <div class="w-1/3 mx-4 mr-auto px-6 py-4 bg-gray-200">
+  <div class="col-span-1"></div>
+  <div class="col-span-3">
     <ul>
       {%- for skill in skillsSection.skills %}
         <li>
@@ -19,4 +25,4 @@
       {%- endfor %}
     </ul>
   </div>
-</section>
+</div>
