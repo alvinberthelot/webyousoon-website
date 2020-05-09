@@ -11,9 +11,6 @@ function mapData(data) {
 }
 
 function mapEducationSection(educationSection) {
-  console.log(educationSection)
-
-  // return educationSection
   return {
     ...educationSection,
     educationsByYear: mapEducations(educationSection.educations),
