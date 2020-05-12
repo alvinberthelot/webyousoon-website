@@ -1,9 +1,11 @@
 <section class="mb-4">
-  <h4 class="text-2xl text-blue-500">{{ educationsByYear.year }}</h4>
+  <h4 class="text-4xl text-black font-semibold">
+    {{ educationsByYear.year }}
+  </h4>
   <ul class="list-outside">
     {%- for education in educationsByYear.educations %}
     <li class="">
-      {% include "education.html" %}
+      {% include "components/education.html" %}
     </li>
     {%- endfor %}
   </ul>

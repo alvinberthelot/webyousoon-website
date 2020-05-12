@@ -1,0 +1,15 @@
+<section id="events">
+  <h3 class="text-4xl text-cyan text-opacity-50 mb-6 uppercase">
+    {{ eventsSection.title }}
+  </h3>
+  <p class="py-2 mb-6">
+    {{ eventsSection.description }}
+  </p>
+  <ul>
+    {%- for eventsByYear in eventsSection.eventsByYear %}
+    <li>
+      {% include "components/eventsByYear.html" %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

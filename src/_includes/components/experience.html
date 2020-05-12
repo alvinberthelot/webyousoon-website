@@ -1,0 +1,17 @@
+<div class="py-6 text-black text-opacity-80">
+  <h4 class="text-2xl text-black text-opacity-90">{{ experience.company }}</h4>
+  <div
+    class="flex border-b-2 border-gold py-2 text-sm text-black text-opacity-50"
+  >
+    <div class="flex-grow-0">{{ experience.dateBegin }}</div>
+    <div class="flex-grow"></div>
+    <div class="flex-grow-0">{{ experience.place }}</div>
+  </div>
+  <p class="text-xl mt-2 py-2 font-semibold">{{ experience.title }}</p>
+  <p class="text-base py-1">{{ experience.description }}</p>
+  {% include "components/tasks.html" %}
+  <p class="text-sm text-black text-opacity-50 italic mb-1">
+    Environnement technique
+  </p>
+  {% include "components/tags.html" %}
+</div>
