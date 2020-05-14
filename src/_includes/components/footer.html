@@ -15,7 +15,7 @@
     <p class="text-xs text-black text-opacity-40 italic mt-6">Jamstack</p>
     <ul class="text-xs text-black text-opacity-60 my-2">
       <li class="mb-1">
-        Réalisé le {{ today }} avec
+        Réalisé le {{ website.today }} avec
         <a href="https://www.11ty.dev" target="_blank" class="text-cyan"
           >Eleventy</a
         >
@@ -34,7 +34,7 @@
       </li>
     </ul>
     <p class="text-xs text-black text-opacity-40 mt-8 py-1">
-      Copyright © Webyousoon {{ website.year }}
+      Copyright © {{ website.title }} {{ website.year }}
     </p>
   </div>
   <div class="col-span-1 bg-black bg-opacity-3"></div>
