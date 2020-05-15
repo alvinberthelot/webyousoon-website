@@ -42,13 +42,16 @@
   <div id="contact" class="col-span-2 pt-8 bg-black bg-opacity-90 text-white">
     <p class="text-white py-2 mb-6 text-2xl font-semibold">Contactez-moi</p>
     <p class="text-white text-opacity-60 text-xs italic">Email</p>
-    <p class="text-gold text-sm my-2">contact@webyousoon.com</p>
+    <p class="text-gold text-sm my-2">{{ website.company.email }}</p>
     <p class="text-white text-opacity-60 text-xs italic mt-6 mb-2">Adresse</p>
     <p class="text-sm">
-      <span>Webyousoon</span><br />
-      <span>61 av Lt Lavenne Montoise</span><br />
-      <span>44000 Nantes</span><br />
-      <span>France</span>
+      <span>{{ website.company.name }}</span><br />
+      <span>{{ website.company.address.street }}</span><br />
+      <span
+        >{{ website.company.address.postcode }} {{
+        website.company.address.locality }}</span
+      ><br />
+      <span>{{ website.company.address.country }}</span>
     </p>
   </div>
   <div class="col-span-1 bg-black bg-opacity-90"></div>
