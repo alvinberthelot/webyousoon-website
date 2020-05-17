@@ -4,7 +4,7 @@
     {{ skillsSection.title }}
   </h3>
   <div class="col-span-1"></div>
-  <p class="col-span-3 py-2 mb-6">
+  <p class="col-span-2 py-2 mb-6">
     {{ skillsSection.description }}
   </p>
   <div class="col-span-1"></div>
@@ -13,8 +13,10 @@
       {%- for skill in skillsSection.skills %}
       <li>
         <div>
-          <h4>{{ skill.title }}</h4>
-          <ul class="list-square list-skills">
+          <h4 class="text-2xl text-black text-opacity-90 mb-2">
+            {{ skill.title }}
+          </h4>
+          <ul class="list-square list-inside mb-6">
             {%- for subskill in skill.subskills %}
             <li>{{ subskill }}</li>
             {%- endfor %}
@@ -24,4 +26,5 @@
       {%- endfor %}
     </ul>
   </div>
+  <div class="col-span-1"></div>
 </div>
