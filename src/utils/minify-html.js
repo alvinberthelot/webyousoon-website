@@ -1,4 +1,4 @@
-const htmlmin = require("html-minifier")
+const htmlmin = require("html-minifier-terser")
 
 module.exports = function (content, outputPath) {
   if (outputPath.endsWith(".html")) {
