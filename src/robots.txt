@@ -2,5 +2,4 @@
 sitemap: https://www.webyousoon.com/sitemap.xml
 # No follow 
 User-agent: *
-# Disallow: /404.html
-Disallow: /
+Disallow: /404.html
