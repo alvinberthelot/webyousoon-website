@@ -8,23 +8,23 @@ describe(`GIVEN function mapEvents`, () => {
         {
           title: "DotJS",
           website: "https://www.dotjs.io",
-          date: "05-12-2019",
+          date: "2019-12-05",
         },
         {
           title: "DotCSS",
           website: "https://www.dotcss.io",
-          date: "04-12-2018",
+          date: "2018-12-04",
         },
         {
           title: "Hello World",
           website: "https://hello-world-conference.github.io/",
-          date: "15-11-2018",
+          date: "2018-11-15",
           organizer: true,
         },
         {
           title: "DevFest Nantes",
           website: "https://devfest.gdgnantes.com",
-          date: "21-10-2015",
+          date: "2015-10-21",
         },
       ]
       const expected = [
@@ -34,7 +34,7 @@ describe(`GIVEN function mapEvents`, () => {
             {
               title: "DotJS",
               website: "https://www.dotjs.io",
-              date: moment("05-12-2019", "DD-MM-YYYY"),
+              date: moment("2019-12-05", "YYYY-MM-DD"),
             },
           ],
         },
@@ -44,12 +44,12 @@ describe(`GIVEN function mapEvents`, () => {
             {
               title: "DotCSS",
               website: "https://www.dotcss.io",
-              date: moment("04-12-2018", "DD-MM-YYYY"),
+              date: moment("2018-12-04", "YYYY-MM-DD"),
             },
             {
               title: "Hello World",
               website: "https://hello-world-conference.github.io/",
-              date: moment("15-11-2018", "DD-MM-YYYY"),
+              date: moment("2018-11-15", "YYYY-MM-DD"),
               organizer: true,
             },
           ],
@@ -60,7 +60,7 @@ describe(`GIVEN function mapEvents`, () => {
             {
               title: "DevFest Nantes",
               website: "https://devfest.gdgnantes.com",
-              date: moment("21-10-2015", "DD-MM-YYYY"),
+              date: moment("2015-10-21", "YYYY-MM-DD"),
             },
           ],
         },

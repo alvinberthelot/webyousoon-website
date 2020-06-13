@@ -3,7 +3,10 @@
   <div
     class="flex border-b-2 border-gold py-2 text-sm text-black text-opacity-50"
   >
-    <div class="flex-grow-0">{{ experience.dateBegin }}</div>
+    <div class="flex-grow-0">
+      De {{ experience.dateBegin | experienceDate }} à {{ experience.dateEnd |
+      experienceDate }}
+    </div>
     <div class="flex-grow"></div>
     <div class="flex-grow-0">{{ experience.place }}</div>
   </div>

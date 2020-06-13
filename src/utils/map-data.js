@@ -20,7 +20,7 @@ function mapEducationSection(educationSection) {
 function mapEducations(educations) {
   const educationsDated = educations.map((education) => ({
     ...education,
-    date: moment(education.date, "DD-MM-YYYY"),
+    date: moment(education.date, "YYYY-MM-DD"),
   }))
   const educationsGroupByYear = groupBy(educationsDated, (education) =>
     education.date.year()
@@ -43,7 +43,7 @@ function mapEventsSection(eventsSection) {
 function mapEvents(events) {
   const eventsDated = events.map((event) => ({
     ...event,
-    date: moment(event.date, "DD-MM-YYYY"),
+    date: moment(event.date, "YYYY-MM-DD"),
   }))
   const eventsGroupByYear = groupBy(eventsDated, (event) => event.date.year())
   const yearsSortedDesc = sortBy(Object.keys(eventsGroupByYear)).reverse()
