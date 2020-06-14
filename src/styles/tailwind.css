@@ -213,7 +213,7 @@ a {
   @apply bg-gold;
 }
 #aggregate > .stacks-title-vertical {
-  @apply invisible;
+  @apply hidden;
 }
 @screen md {
   #aggregate {
@@ -224,10 +224,10 @@ a {
     @apply col-end-8;
   }
   #aggregate > .stacks-title-horizontal {
-    @apply invisible;
+    @apply hidden;
   }
   #aggregate > .stacks-title-vertical {
-    @apply visible;
+    @apply block;
     @apply col-start-8;
     @apply col-end-9;
     @apply text-vertical;
