@@ -398,3 +398,47 @@ a {
     @apply col-span-2;
   }
 }
+
+footer .company {
+  @apply bg-black;
+  @apply bg-opacity-3;
+  @apply px-2;
+}
+footer #contact {
+  @apply bg-black;
+  @apply bg-opacity-90;
+  @apply px-2;
+}
+footer .company > .company-content {
+  @apply py-12;
+}
+footer #contact > .contact-content {
+  @apply py-12;
+}
+@screen md {
+  footer {
+    @apply flex;
+  }
+  footer .company {
+    @apply w-1/2;
+    @apply grid;
+    @apply grid-cols-4;
+    @apply order-1;
+  }
+  footer .company > .company-content {
+    @apply py-12;
+    @apply col-start-2;
+    @apply col-end-5;
+  }
+  footer #contact {
+    @apply w-1/2;
+    @apply grid;
+    @apply grid-cols-4;
+    @apply order-2;
+  }
+  footer #contact > .contact-content {
+    @apply py-12;
+    @apply col-start-2;
+    @apply col-end-5;
+  }
+}

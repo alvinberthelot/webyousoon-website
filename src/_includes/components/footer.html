@@ -1,54 +1,57 @@
-<footer class="grid grid-cols-8">
-  <div class="col-span-1 bg-black bg-opacity-3"></div>
-  <div class="col-span-2 bg-black bg-opacity-3 py-12">
-    <a href="/" class="text-black"
-      ><span class="text-cyan">/</span><span class="text-gold mr-1">/</span>{{
-      website.title }}</a
-    >
-    <p class="text-xs text-black text-opacity-40 italic mt-10">Plan du site</p>
-    <ul class="my-2">
-      <li class="mb-1 text-sm"><a href="/">Accueil</a></li>
-      <li class="mb-1 text-sm">
-        <a href="/alvin-berthelot.html">Qui suis-je ?</a>
-      </li>
-    </ul>
-    <p class="text-xs text-black text-opacity-40 italic mt-6">Jamstack</p>
-    <ul class="text-xs text-black text-opacity-60 my-2">
-      <li class="mb-1">
-        Réalisé le {{ website.today }} avec
-        <a href="https://www.11ty.dev" target="_blank">Eleventy</a>
-      </li>
-      <li class="mb-1">
-        Hébergé par
-        <a href="https://www.netlify.com" target="_blank">Netlify</a>
-      </li>
-      <li class="mb-1">
-        Contenu {{ website.version }}
-      </li>
-      <li class="mb-1">
-        Présentation {{ website.display }}
-      </li>
-    </ul>
-    <p class="text-xs text-black text-opacity-40 mt-8 py-1">
-      Copyright © {{ website.title }} {{ website.year }}
-    </p>
+<footer>
+  <div id="contact">
+    <div class="contact-content">
+      <p class="text-white mb-6 text-2xl font-semibold">Contactez-moi</p>
+      <p class="text-white text-opacity-60 text-xs italic">Email</p>
+      <p class="text-gold text-sm my-2">{{ website.company.email }}</p>
+      <p class="text-white text-opacity-60 text-xs italic mt-6 mb-2">Adresse</p>
+      <p class="text-white text-sm">
+        <span>{{ website.company.name }}</span><br />
+        <span>{{ website.company.address.street }}</span><br />
+        <span
+          >{{ website.company.address.postcode }} {{
+          website.company.address.locality }}</span
+        ><br />
+        <span>{{ website.company.address.country }}</span>
+      </p>
+    </div>
   </div>
-  <div class="col-span-1 bg-black bg-opacity-3"></div>
-  <div class="col-span-1 bg-black bg-opacity-90"></div>
-  <div id="contact" class="col-span-2 pt-8 bg-black bg-opacity-90 text-white">
-    <p class="text-white py-2 mb-6 text-2xl font-semibold">Contactez-moi</p>
-    <p class="text-white text-opacity-60 text-xs italic">Email</p>
-    <p class="text-gold text-sm my-2">{{ website.company.email }}</p>
-    <p class="text-white text-opacity-60 text-xs italic mt-6 mb-2">Adresse</p>
-    <p class="text-sm">
-      <span>{{ website.company.name }}</span><br />
-      <span>{{ website.company.address.street }}</span><br />
-      <span
-        >{{ website.company.address.postcode }} {{
-        website.company.address.locality }}</span
-      ><br />
-      <span>{{ website.company.address.country }}</span>
-    </p>
+
+  <div class="company">
+    <div class="company-content">
+      <a href="/" class="text-black"
+        ><span class="text-cyan">/</span><span class="text-gold mr-1">/</span>{{
+        website.title }}</a
+      >
+      <p class="text-xs text-black text-opacity-40 italic mt-10">
+        Plan du site
+      </p>
+      <ul class="my-2">
+        <li class="mb-1 text-sm"><a href="/">Accueil</a></li>
+        <li class="mb-1 text-sm">
+          <a href="/alvin-berthelot.html">Qui suis-je ?</a>
+        </li>
+      </ul>
+      <p class="text-xs text-black text-opacity-40 italic mt-6">Jamstack</p>
+      <ul class="text-xs text-black text-opacity-60 my-2">
+        <li class="mb-1">
+          Réalisé le {{ website.today }} avec
+          <a href="https://www.11ty.dev" target="_blank">Eleventy</a>
+        </li>
+        <li class="mb-1">
+          Hébergé par
+          <a href="https://www.netlify.com" target="_blank">Netlify</a>
+        </li>
+        <li class="mb-1">
+          Contenu {{ website.version }}
+        </li>
+        <li class="mb-1">
+          Présentation {{ website.display }}
+        </li>
+      </ul>
+      <p class="text-xs text-black text-opacity-40 mt-8 py-1">
+        Copyright © {{ website.title }} {{ website.year }}
+      </p>
+    </div>
   </div>
-  <div class="col-span-1 bg-black bg-opacity-90"></div>
 </footer>
