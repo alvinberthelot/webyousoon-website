@@ -1,11 +1,11 @@
 <section id="events">
-  <h2>
+  <h2 class="title">
     {{ eventsSection.title }}
   </h2>
-  <p class="py-2 mb-6">
+  <p class="description">
     {{ eventsSection.description }}
   </p>
-  <ul>
+  <ul class="list-events">
     {%- for eventsByYear in eventsSection.eventsByYear %}
     <li>
       {% include "components/eventsByYear.html" %}

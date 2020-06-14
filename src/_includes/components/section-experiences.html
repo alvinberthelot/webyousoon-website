@@ -1,10 +1,15 @@
-<div class="grid grid-cols-8 mb-12">
-  <div class="col-span-1"></div>
-  <div class="col-span-3">
-    {% include "components/section-work-experience.html" %}
-  </div>
-  <div class="col-span-1"></div>
-  <div class="col-span-3">
-    {% include "components/section-events.html" %}
-  </div>
-</div>
+<section id="experiences">
+  <h2 class="title">
+    {{ workExperienceSection.title }}
+  </h2>
+  <!-- <p class="description">
+    {{ workExperienceSection.description }}
+  </p> -->
+  <ul class="list-experiences">
+    {%- for experience in workExperienceSection.experiences %}
+    <li class="mb-4">
+      {% include "components/experience.html" %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
