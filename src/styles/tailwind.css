@@ -242,3 +242,55 @@ a {
     @apply bg-gold;
   }
 }
+
+#educations {
+  @apply grid;
+  @apply grid-cols-8;
+  @apply mb-12;
+  @apply mt-12;
+}
+#educations > .educations-content {
+  @apply px-2;
+  @apply py-6;
+  @apply col-start-1;
+  @apply col-end-9;
+  @apply bg-black;
+  @apply bg-opacity-3;
+  @apply grid;
+  @apply grid-cols-6;
+}
+#educations > .educations-content > .title {
+  @apply col-start-1;
+  @apply col-end-7;
+}
+#educations > .educations-content > .description {
+  @apply mb-6;
+  @apply py-2;
+  @apply col-start-1;
+  @apply col-end-9;
+}
+#educations > .educations-content > .list-educations {
+  @apply col-start-1;
+  @apply col-end-9;
+}
+@screen md {
+  #educations {
+    @apply px-0;
+  }
+  #educations > .educations-content {
+    @apply col-start-1;
+    @apply col-end-7;
+  }
+  #educations > .educations-content > .title {
+    @apply col-start-2;
+    @apply col-end-7;
+  }
+  #educations > .educations-content > .description {
+    @apply col-start-2;
+    @apply col-end-7;
+  }
+  #educations > .educations-content > .list-educations {
+    @apply col-start-2;
+    @apply col-end-7;
+  }
+}
