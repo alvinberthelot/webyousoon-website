@@ -1,6 +1,6 @@
 {
   "name": "webyousoon-website",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Alvin BERTHELOT",
   "description": "Static generator of Webyousoon's website",
   "main": "index.js",
