@@ -1,6 +1,6 @@
-<ul class="list-square list-outside flex">
+<ul class="list-square list-outside flex flex-wrap">
   {%- for stack in aggregate.stacks %}
-  <li class="mx-6 w-1/3">
+  <li class="mx-6 flex-grow">
     {% include "components/stack.html" %}
   </li>
   {%- endfor %}

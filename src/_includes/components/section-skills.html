@@ -1,14 +1,13 @@
-<div id="skills" class="grid grid-cols-8 mb-12">
-  <div class="col-span-1"></div>
-  <h2 class="col-span-7">
+<div id="skills">
+  <h2 class="title">
     {{ skillsSection.title }}
   </h2>
-  <div class="col-span-1"></div>
-  <p class="col-span-2 py-2 mb-6">
+
+  <p class="description">
     {{ skillsSection.description }}
   </p>
-  <div class="col-span-1"></div>
-  <div class="col-span-3">
+
+  <div class="list-skills">
     <ul>
       {%- for skill in skillsSection.skills %}
       <li>
@@ -26,5 +25,4 @@
       {%- endfor %}
     </ul>
   </div>
-  <div class="col-span-1"></div>
 </div>

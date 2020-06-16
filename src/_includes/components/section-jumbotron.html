@@ -1,33 +1,27 @@
-<section class="grid grid-cols-8 mb-12">
-  <div class="col-span-1"></div>
-  <div class="col-span-2">
+<section id="jumbotron">
+  <div class="text">
     <h1>
       {{ firstname }} {{ lastname }}
     </h1>
     <p class="py-2"></p>
     <!-- <p class="py-1">Ici vous retrouverez</p> -->
     <ul class="py-1 text-sm">
-      <li><a href="#skills" class="text-cyan">{{ skillsSection.title }}</a></li>
+      <li><a href="#skills">{{ skillsSection.title }}</a></li>
       <li>
-        <a href="#technical-skills" class="text-cyan"
-          >{{ technicalSkillsSection.title }}</a
-        >
+        <a href="#technical-skills">{{ technicalSkillsSection.title }}</a>
       </li>
       <li>
-        <a href="#educations" class="text-cyan">{{ educationSection.title }}</a>
+        <a href="#educations">{{ educationSection.title }}</a>
       </li>
       <li>
-        <a href="#work-experiences" class="text-cyan"
-          >{{ workExperienceSection.title }}</a
-        >
+        <a href="#work-experiences">{{ workExperienceSection.title }}</a>
       </li>
       <li>
-        <a href="#events" class="text-cyan">{{ eventsSection.title }}</a>
+        <a href="#events">{{ eventsSection.title }}</a>
       </li>
     </ul>
   </div>
-  <div class="col-span-1"></div>
-  <div class="col-span-4">
+  <div class="picture">
     <img src="assets/pictures/jumbotron-alvin-berthelot.jpg" alt="" />
   </div>
 </section>
