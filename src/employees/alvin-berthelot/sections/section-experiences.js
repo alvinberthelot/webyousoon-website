@@ -1,6 +1,72 @@
 const { experienceDate } = require("../../../utils/dates")
 
 module.exports = function (experiencesSection) {
+  const displayCharts = (experiences) => {
+    return `
+<script>
+const colorCustom = "#FFC107"
+const color = Chart.helpers.color
+const config = {
+  type: "radar",
+  data: {
+    labels: [
+      "Web",
+      "SPA",
+      "Mobile",
+      "Node.js",
+      "Java EE",
+      "Base de données",
+      "Tests",
+      "Déploiement",
+      "Qualité"
+    ],
+    datasets: [
+      {
+        backgroundColor: color(colorCustom).alpha(0.2).rgbString(),
+        borderColor: colorCustom,
+        pointBackgroundColor: colorCustom,
+        pointRadius: 0,
+        data: [
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+        ],
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    legend: {
+      display: false,
+    },
+    scale: {
+      angleLines: {
+        display: true,
+        ticks: {
+          display: false
+        }
+      },
+    }
+  },
+}
+
+window.onload = function() {
+  ${experiences.map(
+    (experience) =>
+      `new Chart(document.getElementById("${experience.id}"), { ...config })`
+  )}
+}
+
+</script>
+`
+  }
+
   const displayTask = (task) => `
 <li class="mb-1">
   <span class="text-sm">${task}</span>
@@ -39,92 +105,22 @@ module.exports = function (experiencesSection) {
       </ul>
     </div>
     <div class="experience-metadata">
-      <p class="text-sm text-black text-opacity-50 italic mb-1">
+      <div style="width: 100%;">
+        <canvas id="${experience.id}"></canvas>
+      </div>
+      <p class="text-sm text-black text-opacity-50 italic pt-4 mt-4 mb-1">
         Environnement technique
       </p>
       <ul class="flex flex-wrap">
         ${experience.tags.map(displayTag).join("")}
       </ul>
-
-
-
-<div style="width: 100%;">
-  <canvas id="canvas"></canvas>
-</div>
-<script>
-  var colorCustom = "#FFC107"
-  var randomScalingFactor = function () {
-    return Math.round(Math.random() * 100)
-  }
-
-  // console.log("test", technicalSkillsSection.aggregates);
-  
-
-  var color = Chart.helpers.color
-  var config = {
-    type: "radar",
-    data: {
-      labels: [
-        "Web",
-        "SPA",
-        "Mobile",
-        "Node.js",
-        "Java EE",
-        "Base de données",
-        "Tests",
-        "Déploiement",
-        "Qualité"
-      ],
-      datasets: [
-        {
-          backgroundColor: color(colorCustom).alpha(0.2).rgbString(),
-          borderColor: colorCustom,
-          pointBackgroundColor: colorCustom,
-          pointRadius: 0,
-          data: [
-            randomScalingFactor(),
-            randomScalingFactor(),
-            randomScalingFactor(),
-            randomScalingFactor(),
-            randomScalingFactor(),
-            randomScalingFactor(),
-            randomScalingFactor(),
-            randomScalingFactor(),
-            randomScalingFactor(),
-          ],
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      legend: {
-        display: false,
-      },
-      scale: {
-        angleLines: {
-          display: true,
-          ticks: {
-            display: false
-          }
-        },
-      }
-    },
-  }
-
-  window.onload = function () {
-    window.myRadar = new Chart(document.getElementById("canvas"), config)
-  }
-
-
-</script>
-
-
     </div>
   </div>
 </li>
 `
 
   return `
+${displayCharts(experiencesSection.experiences)}
 <section id="experiences">
   <h2 class="title">
     ${experiencesSection.title}

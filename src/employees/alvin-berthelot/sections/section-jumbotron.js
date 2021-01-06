@@ -13,10 +13,10 @@ module.exports = function (data) {
         <a href="#technical-skills">${data.technicalSkillsSection.title}</a>
       </li>
       <li>
-        <a href="#educations">${data.educationSection.title}</a>
+        <a href="#educations">${data.educationsSection.title}</a>
       </li>
       <li>
-        <a href="#experiences">${data.workExperienceSection.title}</a>
+        <a href="#experiences">${data.experiencesSection.title}</a>
       </li>
       <li>
         <a href="#events">${data.eventsSection.title}</a>

@@ -26,10 +26,10 @@ class Employee {
       renderData.data.technicalSkillsSection
     )
     const educationsSection = require("./sections/section-educations")(
-      renderData.data.educationSection
+      renderData.data.educationsSection
     )
     const experiencesSection = require("./sections/section-experiences")(
-      renderData.data.workExperienceSection
+      renderData.data.experiencesSection
     )
     const eventsSection = require("./sections/section-events")(
       renderData.data.eventsSection

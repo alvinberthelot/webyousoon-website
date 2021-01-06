@@ -1,4 +1,4 @@
-module.exports = function (educationSection) {
+module.exports = function (educationsSection) {
   const displayEducation = (education) => `
 <li>
   <span class="text-base text-black text-opacity-90">
@@ -20,7 +20,7 @@ module.exports = function (educationSection) {
 </li>
 `
 
-  const educationsByYear = educationSection.educationsByYear
+  const educationsByYear = educationsSection.educationsByYear
     .map(displayEducationsByYear)
     .join(``)
 
@@ -28,9 +28,9 @@ module.exports = function (educationSection) {
 <section id="educations">
   <div class="educations-content">
     <h2 class="title">
-      ${educationSection.title}
+      ${educationsSection.title}
     </h2>
-    <p class="description">${educationSection.description}</p>
+    <p class="description">${educationsSection.description}</p>
     <ul class="list-educations">
       ${educationsByYear}
     </ul>

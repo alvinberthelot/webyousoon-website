@@ -4,16 +4,16 @@ const { groupBy, sortBy } = require("lodash")
 function mapData(data) {
   const result = {
     ...data,
-    educationSection: mapEducationSection(data.educationSection),
+    educationsSection: mapEducationsSection(data.educationsSection),
     eventsSection: mapEventsSection(data.eventsSection),
   }
   return result
 }
 
-function mapEducationSection(educationSection) {
+function mapEducationsSection(educationsSection) {
   return {
-    ...educationSection,
-    educationsByYear: mapEducations(educationSection.educations),
+    ...educationsSection,
+    educationsByYear: mapEducations(educationsSection.educations),
   }
 }
 
