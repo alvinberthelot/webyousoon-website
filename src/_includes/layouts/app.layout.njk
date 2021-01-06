@@ -1,31 +1,31 @@
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>{{ website.title }}</title>
-        <link rel="canonical" href="{{ website.company.website.completeUrl }}"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="generator" content="Eleventy">
-        <!-- metas classiques -->
-        <meta name="description" content="{{ website.company.description }}"/>
-        <meta name="keywords" content="{{ website.company.keywords | join(',') }}"/>
-        <!-- metas Open Graph -->
-        <meta property="og:locale" content="fr_FR"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="{{ website.title }}"/>
-        <meta property="og:description" content="{{ website.company.description }}"/>
-        <meta property="og:url" content="{{ website.company.website.completeUrl }}"/>
-        <meta property="og:site_name" content="{{ website.title }}"/>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ website.title }}</title>
+    <link rel="canonical" href="{{ website.company.website.completeUrl }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="generator" content="Eleventy">
+    <!-- metas classiques -->
+    <meta name="description" content="{{ website.company.description }}"/>
+    <meta name="keywords" content="{{ website.company.keywords | join(',') }}"/>
+    <!-- metas Open Graph -->
+    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ website.title }}"/>
+    <meta property="og:description" content="{{ website.company.description }}"/>
+    <meta property="og:url" content="{{ website.company.website.completeUrl }}"/>
+    <meta property="og:site_name" content="{{ website.title }}"/>
 
-        <!-- metas Twitter -->
-        {# <meta name="twitter:card" content="summary"/>
+    <!-- metas Twitter -->
+    {# <meta name="twitter:card" content="summary"/>
         <meta name="twitter:site" content="@webyousoon"/>
         <meta name="twitter:title" content="Webyousoon - Réalisations d'applications web et mobile"/>
         <meta name="twitter:description" content="Agence web nantaise pour concevoir, réaliser et mettre en service vos applications web et mobiles."/>
         <meta name="twitter:image" content="http://www.webyousoon.com/img/logo.png"/> #}
 
-        <!-- favicons -->
-        {# <link
+    <!-- favicons -->
+    {# <link
       rel="apple-touch-icon"
       sizes="57x57"
       href="/apple-touch-icon-57x57.png"
@@ -84,11 +84,12 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
     <meta name="theme-color" content="#ffffff" /> #}
 
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body class="font-body text-black text-opacity-80">
-        {% include "components/header.html" %}
-        {{ content | safe }}
-        {% include "components/footer.html" %}
-    </body>
+    <script src="assets/js/chartjs/Chart.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body class="font-body text-black text-opacity-80">
+    {% include "components/header.html" %}
+    {{ content | safe }}
+    {% include "components/footer.html" %}
+  </body>
 </html>
