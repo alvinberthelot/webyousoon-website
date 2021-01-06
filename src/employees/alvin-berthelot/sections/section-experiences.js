@@ -8,38 +8,7 @@ const colorCustom = "#FFC107"
 const color = Chart.helpers.color
 const config = {
   type: "radar",
-  data: {
-    labels: [
-      "Web",
-      "SPA",
-      "Mobile",
-      "Node.js",
-      "Java EE",
-      "Base de données",
-      "Tests",
-      "Déploiement",
-      "Qualité"
-    ],
-    datasets: [
-      {
-        backgroundColor: color(colorCustom).alpha(0.2).rgbString(),
-        borderColor: colorCustom,
-        pointBackgroundColor: colorCustom,
-        pointRadius: 0,
-        data: [
-          10,
-          20,
-          30,
-          40,
-          50,
-          60,
-          70,
-          80,
-          90,
-        ],
-      },
-    ],
-  },
+
   options: {
     responsive: true,
     legend: {
@@ -59,7 +28,21 @@ const config = {
 window.onload = function() {
   ${experiences.map(
     (experience) =>
-      `new Chart(document.getElementById("${experience.id}"), { ...config })`
+      `new Chart(document.getElementById("${experience.id}"), {
+        ...config,
+        data: {
+          labels: ["${experience.scores.labels.join('", "')}"],
+          datasets: [
+            {
+              backgroundColor: color(colorCustom).alpha(0.2).rgbString(),
+              borderColor: colorCustom,
+              pointBackgroundColor: colorCustom,
+              pointRadius: 0,
+              data: [${experience.scores.values}],
+            },
+          ],
+        },
+      })`
   )}
 }
 
