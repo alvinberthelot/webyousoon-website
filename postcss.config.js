@@ -3,7 +3,7 @@ const tailwindcss = require("tailwindcss")("tailwind.config.js")
 const autoprefixer = require("autoprefixer")
 
 const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./src/**/*.html", "./src/**/*.njk"],
+  content: ["./src/**/*.html", "./src/**/*.njk", "./src/**/*.js"],
   defaultExtractor: (content) => {
     const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
     const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
