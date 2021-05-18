@@ -65,6 +65,20 @@ window.onload = function() {
 </li>
 `
 
+  const displayDuration = (duration) => {
+    let result = ""
+    if (duration.years) {
+      if (duration.years > 1) {
+        result += `${duration.years} ans et `
+      } else {
+        result += `${duration.years} an et `
+      }
+    }
+    result += `${duration.months} mois`
+
+    return result
+  }
+
   const displayExperience = (experience) => `
 <li class="mb-4">
   <div id="experience" class="py-6 text-black text-opacity-80">
@@ -76,7 +90,7 @@ window.onload = function() {
         <div class="flex-grow-0">
           De ${experienceDate(experience.dateBegin)} à ${experienceDate(
     experience.dateEnd
-  )}
+  )} - ${displayDuration(experience.duration)}
         </div>
         <div class="flex-grow"></div>
         <div class="flex-grow-0">${experience.place}</div>
