@@ -28,7 +28,7 @@
   "dependencies": {
     "@11ty/eleventy": "0.10.0",
     "@11ty/eleventy-plugin-rss": "1.0.7",
-    "axios": "0.19.2",
+    "axios": "0.21.1",
     "chart.js": "2.9.3",
     "html-minifier-terser": "5.1.1",
     "lodash": "4.17.15",
