@@ -31,7 +31,7 @@
     "axios": "0.19.2",
     "chart.js": "2.9.3",
     "html-minifier-terser": "5.1.1",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "luxon": "1.24.1",
     "moment": "2.25.3",
     "tailwindcss": "1.4.0"
