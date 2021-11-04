@@ -90,7 +90,11 @@ window.onload = function() {
         <div class="flex-grow-0">
           De ${experienceDate(experience.dateBegin)} à ${experienceDate(
     experience.dateEnd
-  )} - ${displayDuration(experience.duration)}
+  )}${
+    experience.duration.years || experience.duration.months
+      ? " - " + displayDuration(experience.duration)
+      : ""
+  }
         </div>
         <div class="flex-grow"></div>
         <div class="flex-grow-0">${experience.place}</div>
