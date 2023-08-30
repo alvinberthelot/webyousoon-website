@@ -85,7 +85,7 @@ window.onload = function() {
     <div class="experience-content">
       <h3 class="text-opacity-90">${experience.company}</h3>
       <div
-        class="flex border-b-2 border-gold py-2 text-sm text-black text-opacity-50"
+        class="flex period"
       >
         <div class="flex-grow-0">
           De ${experienceDate(experience.dateBegin)} à ${experienceDate(

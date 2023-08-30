@@ -7,7 +7,6 @@ module.exports = function (technicalSkillsSection) {
   <h2 class="title">
     ${technicalSkillsSection.title}
   </h2>
-  <p class="description">${technicalSkillsSection.description}</p>
 </section>
 ${aggregates}
 `

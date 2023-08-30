@@ -96,6 +96,15 @@ a {
   justify-content: center;
 }
 
+.period {
+  @apply border-t-2;
+  @apply border-gold;
+  @apply py-2;
+  @apply text-sm;
+  @apply text-black;
+  @apply text-opacity-50;
+}
+
 #jumbotron {
   @apply px-2;
   @apply grid;
@@ -130,9 +139,14 @@ a {
   @apply grid-cols-8;
   @apply mb-12;
 }
-#skills > .title {
+#skills > .title,
+#skills> .list-skills {
   @apply col-start-1;
   @apply col-end-9;
+}
+#skills> .list-skills {
+  @apply grid;
+  @apply grid-cols-1;
 }
 #skills > .description {
   @apply mb-6;
@@ -140,25 +154,25 @@ a {
   @apply col-start-1;
   @apply col-end-9;
 }
-#skills > .list-skills {
-  @apply col-start-1;
-  @apply col-end-9;
-}
 @screen md {
   #skills {
     @apply px-0;
   }
-  #skills > .title {
+  #skills > .title,
+  #skills> .list-skills {
     @apply col-start-2;
     @apply col-end-8;
+  }
+  #skills>.list-skills {
+    @apply grid;
+    @apply grid-cols-2;
+  }
+  #skills>.list-skills>li {
+    @apply mr-8;
   }
   #skills > .description {
     @apply col-start-2;
     @apply col-end-4;
-  }
-  #skills > .list-skills {
-    @apply col-start-5;
-    @apply col-end-8;
   }
 }
 

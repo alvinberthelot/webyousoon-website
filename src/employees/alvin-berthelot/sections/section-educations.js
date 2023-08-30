@@ -30,7 +30,6 @@ module.exports = function (educationsSection) {
     <h2 class="title">
       ${educationsSection.title}
     </h2>
-    <p class="description">${educationsSection.description}</p>
     <ul class="list-educations">
       ${educationsByYear}
     </ul>

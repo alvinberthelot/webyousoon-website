@@ -7,12 +7,7 @@ module.exports = function (skillsSection) {
   <h2 class="title">
     ${skillsSection.title}
   </h2>
-  <p class="description">
-    ${skillsSection.description}
-  </p>
-  <div class="list-skills">
-    <ul>${skills}</ul>
-  </div>
+  <ul class="list-skills">${skills}</ul>
 </section>
 `
 }
