@@ -1,8 +1,13 @@
+---
+const { company } = Astro.props;
+---
+
 <header>
   <div class="company">
     <a href="/" class="text-black"
-      ><span class="text-cyan">/</span><span class="text-gold mr-1">/</span>{{
-      website.title }}</a
+      ><span class="text-cyan">/</span><span class="text-gold mr-1">/</span>{
+        company.name
+      }</a
     >
   </div>
   <div class="navigation">

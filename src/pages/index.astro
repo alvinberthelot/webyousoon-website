@@ -1,16 +1,34 @@
 ---
+import Layout from "../layouts/app.layout.astro";
+import Services from "../components/section-services.astro";
+import WhoAmI from "../components/section-whoami.astro";
+import Projects from "../components/section-projects.astro";
 
+const companyResponse = await fetch(
+  `https://my-profile-api.netlify.app/.netlify/functions/company`
+);
+const company = await companyResponse.json();
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout company={company}>
+  <section class="grid grid-cols-8 mb-12">
+    <div class="col-span-1"></div>
+    <div class="col-span-3">
+      <h1>
+        <span>Applications</span><br />
+        <span>web & mobiles</span><br />
+        <span class="text-cyan">conçues pour vous</span>
+      </h1>
+    </div>
+    <div class="col-span-4"></div>
+  </section>
+  <div class="mt-6 mb-6 py-6">
+    <Services company={company} />
+  </div>
+  <div class="mt-6 mb-6 py-6">
+    <WhoAmI company={company} />
+  </div>
+  <div class="mt-6 mb-6 py-6">
+    <Projects company={company} />
+  </div>
+</Layout>

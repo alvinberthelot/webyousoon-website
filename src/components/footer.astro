@@ -1,18 +1,34 @@
+---
+const { company } = Astro.props;
+
+import pj from "../../package.json";
+
+const websiteResponse = await fetch(
+  `https://my-profile-api.netlify.app/.netlify/functions/website`
+);
+const website = await websiteResponse.json();
+
+const date = new Date();
+// Formater la date en utilisant la locale 'fr-FR' pour la France
+const formattedDate = date.toLocaleDateString("fr-FR");
+const year = date.getFullYear();
+---
+
 <footer>
   <div id="contact">
     <div class="contact-content">
       <p class="text-white mb-6 text-2xl font-semibold">Contactez-moi</p>
       <p class="text-white text-opacity-60 text-xs italic">Email</p>
-      <p class="text-gold text-sm my-2">{{ website.company.email }}</p>
+      <p class="text-gold text-sm my-2">{company.email}</p>
       <p class="text-white text-opacity-60 text-xs italic mt-6 mb-2">Adresse</p>
       <p class="text-white text-sm">
-        <span>{{ website.company.name }}</span><br />
-        <span>{{ website.company.address.street }}</span><br />
+        <span>{company.name}</span><br />
+        <span>{company.address.street}</span><br />
         <span
-          >{{ website.company.address.postcode }} {{
-          website.company.address.locality }}</span
+          >{company.address.postcode}
+          {company.address.locality}</span
         ><br />
-        <span>{{ website.company.address.country }}</span>
+        <span>{company.address.country}</span>
       </p>
     </div>
   </div>
@@ -20,8 +36,9 @@
   <div class="company">
     <div class="company-content">
       <a href="/" class="text-black"
-        ><span class="text-cyan">/</span><span class="text-gold mr-1">/</span>{{
-        website.title }}</a
+        ><span class="text-cyan">/</span><span class="text-gold mr-1">/</span>{
+          company.name
+        }</a
       >
       <p class="text-xs text-black text-opacity-40 italic mt-10">
         Plan du site
@@ -32,25 +49,25 @@
           <a href="/alvin-berthelot.html">Qui suis-je ?</a>
         </li>
       </ul>
-      <p class="text-xs text-black text-opacity-40 italic mt-6">Jamstack</p>
+      <p class="text-xs text-black text-opacity-40 italic mt-6">JAMstack</p>
       <ul class="text-xs text-black text-opacity-60 my-2">
         <li class="mb-1">
-          Réalisé le {{ website.today }} avec
-          <a href="https://www.11ty.dev" target="_blank">Eleventy</a>
+          Réalisé le {formattedDate} avec
+          <a href="https://astro.build/" target="_blank">{Astro.generator}</a>
         </li>
         <li class="mb-1">
           Hébergé par
           <a href="https://www.netlify.com" target="_blank">Netlify</a>
         </li>
         <li class="mb-1">
-          Contenu {{ website.version }}
+          Contenu {website.version}
         </li>
         <li class="mb-1">
-          Présentation {{ website.display }}
+          Présentation {pj.version}
         </li>
       </ul>
       <p class="text-xs text-black text-opacity-40 mt-8 py-1">
-        Copyright © {{ website.title }} {{ website.year }}
+        Copyright © {company.name} - {year}
       </p>
     </div>
   </div>
