@@ -1,6 +1,8 @@
 ---
-import EventsByYear from "./events/events-by-year.astro";
 import type { Employee } from "../../types/employee.types.ts";
+
+import EventsByYear from "./events/events-by-year.astro";
+
 const employee: Employee = Astro.props.employee;
 const { eventsSection } = employee;
 ---
@@ -13,6 +15,10 @@ const { eventsSection } = employee;
     {eventsSection.description}
   </p>
   <ul class="list-events">
-    { eventsSection.eventsByYear?.map((eventsByYear) => <EventsByYear eventsByYear={eventsByYear} />)}
+    {
+      eventsSection.eventsByYear?.map((eventsByYear) => (
+        <EventsByYear eventsByYear={eventsByYear} />
+      ))
+    }
   </ul>
 </section>

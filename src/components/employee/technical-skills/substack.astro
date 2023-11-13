@@ -1,6 +1,9 @@
 ---
+import type { Substack } from "../../../types/employee.types";
+
 import Knowledge from "./knowledge.astro";
-const { substack } = Astro.props;
+
+const substack: Substack = Astro.props.substack;
 ---
 
 <li class="my-4">

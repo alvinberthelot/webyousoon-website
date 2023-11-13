@@ -1,5 +1,8 @@
 ---
-import EducationByYear from "./educations/education-by-year.astro";
+import type { Employee } from "../../types/employee.types";
+
+import EducationsByYear from "./educations/educations-by-year.astro";
+
 const employee: Employee = Astro.props.employee;
 const { educationsSection } = employee;
 ---
@@ -8,7 +11,11 @@ const { educationsSection } = employee;
   <div class="educations-content">
     <h2 class="title">{educationsSection.title}</h2>
     <ul class="list-educations">
-      { educationsSection.educationsByYear?.map((educationByYear) => <EducationByYear educationByYear={educationByYear} />)}
+      {
+        educationsSection.educationsByYear?.map((educationsByYear) => (
+          <EducationsByYear educationsByYear={educationsByYear} />
+        ))
+      }
     </ul>
   </div>
 </section>

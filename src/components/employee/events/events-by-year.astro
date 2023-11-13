@@ -1,6 +1,9 @@
 ---
+import type { EventsByYear } from "../../../types/employee.types";
+
 import Event from "./event.astro";
-const { eventsByYear } = Astro.props;
+
+const eventsByYear: EventsByYear = Astro.props.eventsByYear;
 ---
 
 <li>

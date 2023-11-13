@@ -1,5 +1,7 @@
 ---
-const { experience } = Astro.props;
+import type { Experience } from "../../../types/employee.types";
+
+const experience: Experience = Astro.props.experience;
 ---
 
 <li class="mb-4">

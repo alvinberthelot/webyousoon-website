@@ -1,6 +1,9 @@
 ---
+import type { Aggregate } from "../../../types/employee.types";
+
 import Stack from "./stack.astro";
-const { aggregate } = Astro.props;
+
+const aggregate: Aggregate = Astro.props.aggregate;
 ---
 
 <div id="aggregate">
