@@ -1,0 +1,13 @@
+---
+import Aggregate from "./technical-skills/aggregate.astro";
+
+const employee: Employee = Astro.props.employee;
+const { technicalSkillsSection } = employee;
+---
+
+<section id="technical-skills">
+  <h2 class="title">
+    {technicalSkillsSection.title}
+  </h2>
+</section>
+{ technicalSkillsSection.aggregates?.map((aggregate) => <Aggregate aggregate={aggregate} />)}

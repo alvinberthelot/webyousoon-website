@@ -1,0 +1,14 @@
+---
+import EducationByYear from "./educations/education-by-year.astro";
+const employee: Employee = Astro.props.employee;
+const { educationsSection } = employee;
+---
+
+<section id="educations">
+  <div class="educations-content">
+    <h2 class="title">{educationsSection.title}</h2>
+    <ul class="list-educations">
+      { educationsSection.educationsByYear?.map((educationByYear) => <EducationByYear educationByYear={educationByYear} />)}
+    </ul>
+  </div>
+</section>

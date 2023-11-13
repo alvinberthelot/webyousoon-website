@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/app.layout.astro";
+
+import Jumbotron from "../components/employee/section-jumbotron.astro";
+import Skills from "../components/employee/section-skills.astro";
+import TechnicalSkills from "../components/employee/section-technical-skills.astro";
+import Educations from "../components/employee/section-educations.astro";
+import Experiences from "../components/employee/section-experiences.astro";
+import Events from "../components/employee/section-events.astro";
+
+import type { Employee } from "../types/employee.types.ts";
+
+import { mapEmployee } from "../helpers/employee.helpers.ts";
+
+const companyResponse = await fetch(
+  `https://my-profile-api.netlify.app/.netlify/functions/company`
+);
+const company = await companyResponse.json();
+
+const employeeResponse = await fetch(
+  `https://my-profile-api.netlify.app/.netlify/functions/website-alvin-berthelot`
+);
+const employee: Employee = await employeeResponse.json();
+const employeeSSG = mapEmployee(employee);
+---
+
+<Layout company={company}>
+  <Jumbotron employee={employeeSSG} />
+  <Skills employee={employeeSSG} />
+  <TechnicalSkills employee={employeeSSG} />
+  <Educations employee={employeeSSG} />
+  <Experiences employee={employeeSSG} />
+  <Events employee={employeeSSG} />
+</Layout>

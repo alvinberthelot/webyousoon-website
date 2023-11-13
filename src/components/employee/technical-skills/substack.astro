@@ -1,0 +1,19 @@
+---
+import Knowledge from "./knowledge.astro";
+const { substack } = Astro.props;
+---
+
+<li class="my-4">
+  <span class="text-sm">
+    {substack.title}
+  </span>
+  <span>
+    <ul>
+      {
+        substack.knowledges.map((knowledge) => (
+          <Knowledge knowledge={knowledge} />
+        ))
+      }
+    </ul>
+  </span>
+</li>

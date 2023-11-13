@@ -1,0 +1,18 @@
+---
+import EventsByYear from "./events/events-by-year.astro";
+import type { Employee } from "../../types/employee.types.ts";
+const employee: Employee = Astro.props.employee;
+const { eventsSection } = employee;
+---
+
+<section id="events">
+  <h2 class="title">
+    {eventsSection.title}
+  </h2>
+  <p class="description">
+    {eventsSection.description}
+  </p>
+  <ul class="list-events">
+    { eventsSection.eventsByYear?.map((eventsByYear) => <EventsByYear eventsByYear={eventsByYear} />)}
+  </ul>
+</section>

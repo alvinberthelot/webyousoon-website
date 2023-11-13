@@ -57,6 +57,10 @@ a {
   @apply text-cyan;
 }
 
+.list-square {
+  list-style: square
+}
+
 @tailwind components;
 @tailwind utilities;
 

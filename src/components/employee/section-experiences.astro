@@ -1,0 +1,15 @@
+---
+import Experience from "./experiences/experience.astro";
+import type { Employee } from "../../types/employee.types.ts";
+const employee: Employee = Astro.props.employee;
+const { experiencesSection } = employee;
+---
+
+<section id="experiences">
+  <h2 class="title">
+    {experiencesSection.title}
+  </h2>
+  <ul class="list-experiences">
+    { experiencesSection.experiences?.map((experience) => <Experience experience={experience} />)}
+  </ul>
+</section>

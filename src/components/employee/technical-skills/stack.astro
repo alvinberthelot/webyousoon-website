@@ -1,0 +1,15 @@
+---
+import Substack from "./substack.astro";
+const { stack } = Astro.props;
+---
+
+<li class="mx-6 flex-grow">
+  <span class="text-lg text-black text-opacity-80 font-bold">
+    {stack.title}
+  </span>
+  <span class="">
+    <ul>
+      {stack.substacks?.map((substack) => <Substack substack={substack} />)}
+    </ul>
+  </span>
+</li>

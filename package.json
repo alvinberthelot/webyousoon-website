@@ -15,8 +15,13 @@
     "@astrojs/check": "0.3.1",
     "@astrojs/tailwind": "5.0.2",
     "astro": "3.4.3",
+    "lodash-es": "4.17.21",
+    "moment": "2.29.4",
     "tailwindcss": "3.3.5",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "4.17.11"
   },
   "repository": {
     "type": "git",

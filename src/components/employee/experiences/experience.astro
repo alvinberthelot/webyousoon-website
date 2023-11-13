@@ -1,0 +1,55 @@
+---
+const { experience } = Astro.props;
+---
+
+<li class="mb-4">
+  <div id="experience" class="py-6 text-black text-opacity-80">
+    <div class="experience-content">
+      <h3 class="text-opacity-90">{experience.company}</h3>
+      <div class="flex period">
+        <div class="flex-grow-0">
+          <!-- De ${experienceDate(experience.dateBegin)} à ${
+            experienceDate(experience.dateEnd)
+          }${
+            experience.duration.years || experience.duration.months
+              ? " - " + displayDuration(experience.duration)
+              : ""
+          } -->
+        </div>
+        <div class="flex-grow"></div>
+        <div class="flex-grow-0">{experience.place}</div>
+      </div>
+      <p class="text-xl mt-2 py-2 font-semibold">{experience.title}</p>
+      <p class="text-base py-1">{experience.description}</p>
+      <ul class="list-square list-inside py-2">
+        {
+          experience.tasks?.map((task) => (
+            <li class="mb-1">
+              <span class="text-sm">{task}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="experience-metadata">
+      <div style="width: 100%;">
+        <canvas id="${experience.id}"></canvas>
+      </div>
+      <p class="text-sm text-black text-opacity-50 italic pt-4 mt-4 mb-1">
+        Environnement technique
+      </p>
+      <ul class="flex flex-wrap">
+        {
+          experience.tags?.map((tag) => (
+            <li class="my-1">
+              <span class="bg-gray-100 px-2 py-1 m-1 text-sm">
+                <span class="text-sm text-black text-opacity-20">#</span>
+                <span class="text-black text-opacity-60">{tag.wording}</span>
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</li>

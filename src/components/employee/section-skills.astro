@@ -1,0 +1,25 @@
+---
+const employee: Employee = Astro.props.employee;
+const { skillsSection } = employee;
+---
+
+<section id="skills">
+  <h2 class="title">
+    {skillsSection.title}
+  </h2>
+  <ul class="list-skills">
+      {
+        skillsSection.skills?.map((skill) => 
+      <li>
+        <div>
+          <h3 class="text-opacity-90 mb-2">{skill.title}</h3>
+          <p class="period">{skill.period}</p>
+          <ul class="list-square list-inside mb-6">
+            { skill.subskills?.map((subskill) => <li>{subskill}</li>) }
+          </ul>
+        </div>
+      </li>
+        )
+      }
+  </ul>
+</section>
