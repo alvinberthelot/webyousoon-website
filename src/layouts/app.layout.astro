@@ -4,9 +4,6 @@ import "../styles/index.css";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 
-// interface Props {
-//   company: TODO;
-// }
 const { company } = Astro.props;
 const keywords = company.keywords.join(",");
 ---
@@ -31,8 +28,6 @@ const keywords = company.keywords.join(",");
     <meta property="og:description" content={company.description} />
     <meta property="og:url" content={company.website.completeUrl} />
     <meta property="og:site_name" content={company.name} />
-
-    <!-- <script src="assets/js/chartjs/Chart.min.js"></script> -->
   </head>
   <body class="font-body text-black text-opacity-80">
     <Header company={company} />
