@@ -1,6 +1,8 @@
 ---
 import type { Employee } from "../../types/employee.types";
 
+import { Image } from "astro:assets";
+import jumbotron from "./public/jumbotron-alvin-berthelot.jpg";
 const employee: Employee = Astro.props.employee;
 ---
 
@@ -13,9 +15,6 @@ const employee: Employee = Astro.props.employee;
     <p class="py-2">{employee.skillsSection.description}</p>
   </div>
   <div class="picture">
-    <img
-      src="/jumbotron-alvin-berthelot.jpg"
-      alt="Photo de profil ${data.firstname} ${data.lastname}"
-    />
+    <Image src={jumbotron} alt="Photo de profil d'Alvin Berthelot" />
   </div>
 </section>
