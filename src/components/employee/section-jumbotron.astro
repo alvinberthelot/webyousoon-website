@@ -8,10 +8,7 @@ const employee: Employee = Astro.props.employee;
 
 <section id="jumbotron">
   <div class="text">
-    <h1>
-      {employee.firstname}
-      {employee.lastname}
-    </h1>
+    <h1>{employee.firstname} {employee.lastname}</h1>
     <p class="py-2">{employee.skillsSection.description}</p>
   </div>
   <div class="picture">
