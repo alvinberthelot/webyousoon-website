@@ -33,7 +33,7 @@
     "html-minifier-terser": "5.1.1",
     "lodash": "4.17.15",
     "luxon": "1.24.1",
-    "moment": "2.25.3",
+    "moment": "2.29.4",
     "tailwindcss": "1.4.0"
   },
   "devDependencies": {
