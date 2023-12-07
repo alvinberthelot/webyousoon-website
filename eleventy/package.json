@@ -29,7 +29,7 @@
     "@11ty/eleventy": "0.10.0",
     "@11ty/eleventy-plugin-rss": "1.0.7",
     "axios": "0.19.2",
-    "chart.js": "2.9.3",
+    "chart.js": "2.9.4",
     "html-minifier-terser": "5.1.1",
     "lodash": "4.17.15",
     "luxon": "1.24.1",
