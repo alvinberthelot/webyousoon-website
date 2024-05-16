@@ -2,7 +2,7 @@
 import Layout from "../layouts/app.layout.astro";
 import Services from "../components/section-services.astro";
 import WhoAmI from "../components/section-whoami.astro";
-import Projects from "../components/section-projects.astro";
+// import Projects from "../components/section-projects.astro";
 
 const companyResponse = await fetch(
   `https://my-profile-api.netlify.app/.netlify/functions/company`
@@ -28,7 +28,7 @@ const company = await companyResponse.json();
   <div class="mt-6 mb-6 py-6">
     <WhoAmI company={company} />
   </div>
-  <div class="mt-6 mb-6 py-6">
+  <!-- <div class="mt-6 mb-6 py-6">
     <Projects company={company} />
-  </div>
+  </div> -->
 </Layout>
