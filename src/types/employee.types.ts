@@ -71,8 +71,8 @@ export type Experience = {
   tags: Tag[];
   repository: string;
   downloads: string;
-  // dateBegin: "2007-01-01";
-  // dateEnd: "2007-05-01";
+  dateBegin: string;
+  dateEnd?: string;
 
   // duration: [Object];
   // scores: [Object];
