@@ -2,6 +2,19 @@
 import type { Experience } from "../../../types/employee.types";
 
 const experience: Experience = Astro.props.experience;
+
+// NOTE : harmoniser le formattage des dates
+// + Penser à remettre la durée de l'expérience
+const dateBegin = new Date(experience.dateBegin).toLocaleDateString("fr-FR", {
+  year: "numeric",
+  month: "long",
+});
+const dateEnd = experience.dateEnd
+  ? new Date(experience.dateEnd).toLocaleDateString("fr-FR", {
+      year: "numeric",
+      month: "long",
+    })
+  : "aujourd'hui";
 ---
 
 <li class="mb-4">
@@ -10,9 +23,8 @@ const experience: Experience = Astro.props.experience;
       <h3 class="text-opacity-90">{experience.company}</h3>
       <div class="flex period">
         <div class="flex-grow-0">
-          <!-- De ${experienceDate(experience.dateBegin)} à ${
-            experienceDate(experience.dateEnd)
-          }${
+          De {dateBegin} à {dateEnd}
+          <!-- ${
             experience.duration.years || experience.duration.months
               ? " - " + displayDuration(experience.duration)
               : ""
